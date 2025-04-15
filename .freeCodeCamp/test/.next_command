@@ -94,3 +94,19 @@ __vsc_dbg_trap="$(__vsc_get_trap DEBUG)"
 trap '__vsc_preexec_all "$_"' DEBUG
 __vsc_original_prompt_command=${PROMPT_COMMAND:-}
 pg_dump -cC --inserts -U freecodecamp universe > universe.sql
+pg dump -cC --inserts -U freecodecamp universe > universe.sql
+pg dump -cC --inserts -U freecodecamp universe > universe.sql
+psql -U postgres < universe.sql
+pwd
+git add universe.sql
+git commit -m "Added database dump"
+git push origin main
+git remote set-url origin https://github.com/daniel-erdmenger/learn-celestial-bodies-database.git
+git remote -v
+git universe.sql
+git commit -m "Add universe.sql dump file"
+ls --color=auto
+git add universe.sql
+git add .freeCodeCamp/test/.cwd .freeCodeCamp/test/.next_command
+git add
+git add .
